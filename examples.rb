@@ -2,7 +2,7 @@
 rails g migration Product name:string description:text price:float 
 
 # Average price of products
-Product.average(:price)
+Product.average(:price) # For nice output: Product.average(:price).to_f 
 
 # total sum of all products
 Product.sum(:price)
