@@ -1,6 +1,20 @@
-#rails g migration Product name:string description:text price:float
-#Product.average(:price)
-#Product.all.sum(:price) 
+# Generate Model ang migration 
+rails g migration Product name:string description:text price:float 
 
-p = [55.68, 9.99, 20.0, 13.0, 999.99, 88.99, 120.99, 66.0, 33.33, 99.98765].inject(0){ |n,m|n + m} 
-puts p/10
+# Average price of products
+Product.average(:price)
+
+# total sum of all products
+Product.sum(:price)
+
+# highest price of products
+Product.maximum(:price)
+
+# lowest price of products
+Product.minimum(:price)
+
+# Select product/products named 'TV'
+Product.where(name:'TV')
+
+# Select product/products with price low then 100
+Product.where('price < ?', 100)
