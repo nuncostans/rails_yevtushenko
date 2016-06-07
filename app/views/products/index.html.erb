@@ -1,0 +1,9 @@
+<h1>Products list</h1>
+
+<%- @products.each do |product| %>
+  <%= product.name %>
+  <%= product.description %>
+  <%= product.price %>
+<br />
+<%end%>
+<%= session[:view_count] %>
