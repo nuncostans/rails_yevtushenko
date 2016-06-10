@@ -24,10 +24,8 @@ ActiveRecord::Schema.define(version: 20160609104627) do
   end
 
   create_table "carts", force: :cascade do |t|
-    t.string   "name"
-    t.float    "price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer "account_id"
+    t.float   "price"
   end
 
   create_table "products", force: :cascade do |t|
