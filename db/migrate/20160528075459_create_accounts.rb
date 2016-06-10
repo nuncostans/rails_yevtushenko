@@ -6,7 +6,7 @@ class CreateAccounts < ActiveRecord::Migration
       t.timestamps null: false
     end
 
-    create_table :carts do |to|
+    create_table :carts do |t|
       t.belongs_to :accounts, index: true
       t.string :account_id
       t.timestamps null: false
