@@ -5,8 +5,11 @@ class CreateAccounts < ActiveRecord::Migration
       t.integer :age
       t.timestamps null: false
     end
-    
-    add_index :accounts
-    add_reference :carts, :accounts, index: true
+
+    create_table :carts do |to|
+      t.belongs_to :accounts, index: true
+      t.string :account_id
+      t.timestamps null: false
+    end
   end
 end
