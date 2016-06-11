@@ -26,4 +26,3 @@ Account.first.cart.products.all
 
 #Get total sum
 Account.first.cart.products.sum(:price)
-
