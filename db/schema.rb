@@ -17,16 +17,20 @@ ActiveRecord::Schema.define(version: 20160609104627) do
   enable_extension "plpgsql"
 
   create_table "accounts", force: :cascade do |t|
+    t.integer  "friend_id"
     t.string   "name"
     t.integer  "age"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_index "accounts", ["friend_id"], name: "index_accounts_on_friend_id", using: :btree
+
   create_table "carts", force: :cascade do |t|
     t.integer "account_id"
-    t.float   "price"
   end
+
+  add_index "carts", ["account_id"], name: "index_carts_on_account_id", using: :btree
 
   create_table "products", force: :cascade do |t|
     t.string   "name"
@@ -34,6 +38,9 @@ ActiveRecord::Schema.define(version: 20160609104627) do
     t.float    "price"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "cart_id"
   end
+
+  add_index "products", ["cart_id"], name: "index_products_on_cart_id", using: :btree
 
 end
