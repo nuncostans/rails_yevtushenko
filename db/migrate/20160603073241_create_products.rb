@@ -4,8 +4,8 @@ class CreateProducts < ActiveRecord::Migration
       t.string :name
       t.text :description
       t.float :price
-
       t.timestamps null: false
     end
+    add_reference :products, :cart, index: true
   end
 end
