@@ -4,6 +4,8 @@
   <%= product.name %>
   <%= product.description %>
   <%= product.price %>
-<br />
+  <%= link_to 'Edit', edit_product_path(product) %>
+  <br />
 <%end%>
-<%= session[:view_count] %>
+
+<%= link_to 'Create new product', new_product_path %>
