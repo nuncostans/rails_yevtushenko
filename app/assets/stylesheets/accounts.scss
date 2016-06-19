@@ -1,3 +1,16 @@
 // Place all the styles related to the Accounts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.page-content-accounts {
+  padding:20px;
+  width:900px;
+  margin: 0 auto;
+  }
+  .account-new {
+  padding:20px;
+  width:400px;
+  margin: 0 auto;
+}
+.account-new h2 {
+text-align: center;
+}

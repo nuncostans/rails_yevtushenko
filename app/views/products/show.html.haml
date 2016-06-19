@@ -1,0 +1,21 @@
+.page-content
+  .page-header
+    %h1= @product.name
+  .panel.panel-default
+    .panel-heading
+      %h3.panel-title
+        %b
+          Description
+    .panel-body
+      = @product.description
+  %ul.list-group
+    %li.list-group-item
+      %span.badge
+        = @product.price
+      %b
+        Price
+  = link_to 'Back', products_path, class: 'btn btn-default'
+  = link_to 'Delete', @product, method: :delete, class: 'btn btn-danger'
+
+
+ 

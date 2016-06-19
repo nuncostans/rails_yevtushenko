@@ -1,3 +1,27 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+h1 {
+   display: block;
+}
+a, a:link {
+  color: #000000 !important;
+}
+a:hover, a:focus, a:active{
+  color: red !important;
+  background-color: transparent;
+}
+img {
+  display: block;
+  float: right;
+}
+.page-content {
+  padding:20px;
+  width:300px;
+  margin: 0 auto;
+}
+.index-products {
+  margin: 0 auto;
+  padding: 20px;
+  width: 900px;
+}

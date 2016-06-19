@@ -1,35 +1,61 @@
 class ProductsController < ApplicationController
-  before_action :initialize_session, before: :index
+  before_action :set_product, only: [:show, :edit, :update, :destroy]
   
   def index
     @products =  Product.all
-    session[:view_count] += 1
   end
 
+  def show
+    @product = Product.find(params[:id])
+  end
+  
   def new
     @product = Product.new
   end
 
-  def create
-    @product = Product.new(product_params)
-    respond_to do |format| 
-      if @product.save
-        format.html { redirect_to products_path, notice: 'Product was successfully created.' }
-        format.json { render :show, status: :created, location: @product }
-      else
-        format.html { render :new }
-        format.json { render json: @product.errors, status: :unprocessable_entity }
-      end
-    end
+  def edit
   end
 
+  def create
+    @product = Product.new(product_params)
+    if @product.save
+      flash[:success] = "Produt created!!!"
+      redirect_to products_path
+    else
+      render 'new'
+    end
+    #  if @product.save
+    #    format.html { redirect_to products_path, flash[:success]="Product created!" }
+    #    format.json { render :show, status: :created, location: @product }
+    #  else
+    #    format.html { render :new }
+    #    format.json { render json: @product.errors, status: :unprocessable_entity }
+    #  end
+  end
+
+  def update
+      if @product.update(product_params)
+        flash[:success] = 'Product was successfully updated'
+        redirect_to @product
+      else
+        render 'edit'
+      end
+  end
+  
+  def destroy
+    @product = Product.find(params[:id]).destroy
+    flash[:success] = "You have destroyed product #{@product.name}"
+    redirect_to root_url
+  end
+  
   private
+  
+  def set_product
+    @product = Product.find(params[:id])
+  end
   
   def product_params
     params.require(:product).permit(:name, :description, :price)
   end
-
-  def initialize_session
-    session[:view_count] ||= 0
-  end
+  
 end

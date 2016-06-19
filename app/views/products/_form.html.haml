@@ -1,0 +1,26 @@
+= form_for(@product) do |f|
+  = if @product.errors.any?
+    %div#error_explanation
+      %h2
+        = pluralize(@product.errors.count, "error")
+        "prohibited this account from being saved:"
+
+      %ul
+      - @product.errors.full_messages.each do |message|
+        %li
+        = message
+  .form-group
+    = f.label :name
+    %br
+    = f.text_field :name
+  .form-group
+    = f.label :description
+    %br
+    = f.text_field :description
+  .form-group
+    = f.label :price
+    %br
+    = f.number_field :price
+  .actions
+    = f.submit
+  

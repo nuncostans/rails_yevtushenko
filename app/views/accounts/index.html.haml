@@ -1,0 +1,23 @@
+.page-content-accounts
+  %h1
+    Listing Accounts
+    =image_tag "https://media.giphy.com/media/3o7ablBxBULsBGyeCA/giphy.gif"
+
+  %table.table.table-hover
+    %thead
+      %tr
+        %th Name
+        %th Age
+        %tbody
+          - @accounts.each do |account|
+            %tr
+              %td= account.name
+              %td= account.age
+              %td= link_to 'Show', account, class: 'btn btn-primary'
+              %td= link_to 'Edit', edit_account_path(account), class: 'btn btn-warning'
+              %td= link_to 'Destroy', account, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
+              %td= link_to 'Cart', cart_path(account.id), class: 'btn btn-default'
+              %br
+
+  = link_to 'New Account', new_account_path, class: 'btn btn-success'
+  = link_to 'All Products', products_path, class: 'btn btn-success'
