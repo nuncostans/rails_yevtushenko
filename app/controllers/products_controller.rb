@@ -35,7 +35,7 @@ class ProductsController < ApplicationController
 
   def update
       if @product.update(product_params)
-        flash[:success] = 'Product was successfully updated'
+        flash[:info] = 'Product was successfully updated'
         redirect_to @product
       else
         render 'edit'
@@ -44,7 +44,7 @@ class ProductsController < ApplicationController
   
   def destroy
     @product = Product.find(params[:id]).destroy
-    flash[:success] = "You have destroyed product #{@product.name}"
+    flash[:danger] = "You have destroyed product #{@product.name}"
     redirect_to root_url
   end
   
