@@ -1,0 +1,8 @@
+require 'rails_helper'
+
+describe Account do
+  let(:account) { Account.new }
+
+  it { expect(account).to validate_presence_of(:name) }
+  it { expect(account).to validate_presence_of(:age) }
+end
