@@ -1,12 +1,11 @@
 class CartsController < ApplicationController
   
-  
-  def index
-    :set_current_cart
-  end
+  #def index
+  #  set_current_cart
+  #end
   
   def show
-    @cart = Cart.find(params[:id])
+    @cart = Cart.find(session[:cart_id])
   end
   
   def add_to_cart
