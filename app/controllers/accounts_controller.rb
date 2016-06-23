@@ -39,7 +39,7 @@ class AccountsController < ApplicationController
   # PATCH/PUT /accounts/1.json
   def update
     if @account.update(account_params)
-      flash[:success] = "Account #{@account.name} updated!!!"
+      flash[:info] = "Account #{@account.name} updated!!!"
       redirect_to accounts_path
     else
       render 'new'
@@ -50,7 +50,7 @@ class AccountsController < ApplicationController
   # DELETE /accounts/1.json
   def destroy
     @account.destroy
-    flash[:success] = "Account #{@account.name} deleted!"
+    flash[:danger] = "Account #{@account.name} deleted!"
     redirect_to accounts_path
   end
 
