@@ -1,6 +1,6 @@
 .index-products
   .header
-    = link_to image_tag('shopping_cart_racing.png', size:"40x40"), products_path
+    = link_to image_tag('shopping_cart_racing.png', size:"40x40"), cart_path(session[:cart_id])
     %h1= 'Products list'
 
   %table.table.table-hover
