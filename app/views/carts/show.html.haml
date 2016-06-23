@@ -1,6 +1,6 @@
 .page-content-cart
   .page-header
-    %h1= "Cart of #{Cart.find(params[:id]).account.name}"
+    %h1= "Cart" 
     
     %table.table.table-hover
       - @cart.products.each do |product|
@@ -12,5 +12,5 @@
           %td= link_to 'Edit', edit_product_path(product), class: 'btn btn-warning'
           %td= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?'}, class: 'btn btn-danger'
   %br
-  = link_to 'Back', accounts_path, class: 'btn btn-default'
+  = link_to 'Back', products_path, class: 'btn btn-default'
 
