@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :products#, only: [:index, :new, :create, :edit, :update, :show, :destroy]
 
   resources :carts, only: [:index, :show, :update]
+
   get 'carts/:id', to: 'carts#show', as: :show
  
   post 'carts/add_product', to: 'carts#add', as: 'add_to_cart'
