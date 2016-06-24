@@ -27,13 +27,6 @@ class ProductsController < ApplicationController
     else
       render 'new'
     end
-    #  if @product.save
-    #    format.html { redirect_to products_path, flash[:success]="Product created!" }
-    #    format.json { render :show, status: :created, location: @product }
-    #  else
-    #    format.html { render :new }
-    #    format.json { render json: @product.errors, status: :unprocessable_entity }
-    #  end
   end
 
   def update
