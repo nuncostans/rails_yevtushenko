@@ -1,5 +1,8 @@
 class ProductsController < ApplicationController
+  
   before_action :set_product, only: [:show, :edit, :update, :destroy]
+
+  before_action :product_list_partial_name, only: :index
   
   def index
     @products =  Product.all
@@ -58,4 +61,9 @@ class ProductsController < ApplicationController
     params.require(:product).permit(:name, :description, :price)
   end
   
+  def product_list_partial_name
+    'empty' if Product.all.size == 0
+    'list'    
+  end
+
 end
