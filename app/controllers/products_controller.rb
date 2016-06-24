@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
   
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
-  before_action :product_list_partial_name, only: :index
+  before_action :product_list_partial_name, only: [ :index, :show]
   
   def index
     @products =  Product.all
@@ -50,7 +50,7 @@ class ProductsController < ApplicationController
     flash[:danger] = "You have destroyed product #{@product.name}"
     redirect_to root_url
   end
-  
+
   private
   
   def set_product
@@ -60,10 +60,8 @@ class ProductsController < ApplicationController
   def product_params
     params.require(:product).permit(:name, :description, :price)
   end
-  
-  def product_list_partial_name
-    'empty' if Product.all.size == 0
-    'list'    
-  end
 
+ def product_list_partial_name
+ end
+ 
 end

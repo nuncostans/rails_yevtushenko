@@ -1,4 +1,4 @@
 .index-products
   .header
     = link_to image_tag('shopping_cart_racing.png', size:"40x40"), cart_path(session[:cart_id])
-  = render product_list_partial_name
+  = render "#{product_list_partial_name}"
