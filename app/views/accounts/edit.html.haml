@@ -1,7 +1,8 @@
-%h1
-  Editing Account
+.account-new
+  %h1
+    Editing Account
 
-= render 'form'
+  = render 'form'
 
-= link_to 'Show', @account |
-= link_to 'Back', accounts_path
+  = link_to 'Back', accounts_path, class: "btn btn-info"
+  = link_to 'Show', @account, class: "btn btn-success"
