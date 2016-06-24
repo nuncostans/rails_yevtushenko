@@ -5,11 +5,7 @@ module ProductsHelper
   end
 
   def product_list_partial_name
-   if Product.all.size == 0
-     return 'empty'
-   else
-     return 'list'
-   end
+    @products.empty? ? 'empty' : 'list'
   end
   
 end
