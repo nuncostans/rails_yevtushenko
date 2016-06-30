@@ -1,6 +1,6 @@
 class CartsController < ApplicationController
   
-  before_action :cart_find, only: :show
+  before_action :cart_find
   
   def show
   end
