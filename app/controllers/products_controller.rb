@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
   end
 
   def show
-    set_product
+    @product
   end
   
   def new
@@ -37,7 +37,7 @@ class ProductsController < ApplicationController
   end
   
   def destroy
-    set_product.destroy
+    @product.destroy
     flash[:danger] = "You have destroyed product #{@product.name}"
     redirect_to root_url
   end
