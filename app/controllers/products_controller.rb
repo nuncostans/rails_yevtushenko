@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @product = Product.find(params[:id])
+    set_product
   end
   
   def new
@@ -37,7 +37,7 @@ class ProductsController < ApplicationController
   end
   
   def destroy
-    @product = Product.find(params[:id]).destroy
+    set_product.destroy
     flash[:danger] = "You have destroyed product #{@product.name}"
     redirect_to root_url
   end
