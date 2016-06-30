@@ -3,17 +3,17 @@ class CartsController < ApplicationController
   before_action :cart_find
   
   def show
-    @cart = cart_find.products
+    @products_in_cart
   end
   
   def add
-    @cart = cart_find.products << Product.find(params[:product_id])
+    @products_in_cart << Product.find(params[:product_id])
   end
 
   private
 
   def cart_find
-    @cart = Cart.includes(:products).find(session[:cart_id])
+    @products_in_cart = Cart.includes(:products).find(session[:cart_id]).products
   end
   
 end
