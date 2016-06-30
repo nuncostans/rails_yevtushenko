@@ -3,7 +3,7 @@
     %h1= "Cart" 
     
     %table.table.table-hover
-      - @cart.each do |product|
+      - @products_in_cart.each do |product|
         %tr
           %td= product.name
           %td= product.description
