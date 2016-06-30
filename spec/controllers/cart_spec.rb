@@ -2,8 +2,7 @@ require 'rails_helper'
 
 describe CartsController do
 
-  it 'assigns @cart variadle' do
-    get :show
+  it 'assigns @cart variable' do
     expect(assigns[:cart]).not_to be_nil
   end
 
