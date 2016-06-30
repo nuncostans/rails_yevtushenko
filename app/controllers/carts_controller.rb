@@ -1,9 +1,8 @@
 class CartsController < ApplicationController
   
-  before_action :cart_find
+  before_action :cart_find, only: :show
   
   def show
-    @products_in_cart
   end
   
   def add
