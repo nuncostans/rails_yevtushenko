@@ -62,4 +62,13 @@ describe ProductsController do
     expect(response).to redirect_to root_url
   end
   
+   it 'should find all products like name' do
+    6.times do |i|
+      post :create, product:{ name: "Tv#{i}",description: 'Tv-set', price: 34 }
+    end
+    get :index
+    expect(assigns[:products].size).to eql(6)
+    expect(Product.all.size).to eql(6)
+  end
+  
 end
