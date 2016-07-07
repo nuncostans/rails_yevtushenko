@@ -6,10 +6,10 @@ describe CartsController do
     expect(assigns[:cart]).to be_nil
   end
 
-  it 'add product to cart' do
-    product = create(:product)
-    post :add, product_id: cart.id 
-  end
+#  it 'add product to cart' do
+#    product = create(:product)
+#    post :add, product_id: cart.id 
+#  end
 end
 
 
