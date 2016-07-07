@@ -1,0 +1,11 @@
+language: ruby
+rvm:
+  - 2.3.0
+script: bundle exec rspec spec
+services:
+  - postgresql
+before_script:
+  - psql -c "create role rails_yevtushenko with createdb login password '2314523rails';" -U postgres
+  - bundle exec rake db:setup
+notifications:
+  email: true

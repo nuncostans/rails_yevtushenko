@@ -1,3 +1,6 @@
+[![Travis CI       ](https://travis-ci.org/nuncostans/rails_yevtushenko.svg)           ](https://travis-ci.org/nuncostans/rails_yevtushenko)
+[![Coverage Status](https://coveralls.io/repos/github/nuncostans/rails_yevtushenko/badge.svg)](https://coveralls.io/github/nuncostans/rails_yevtushenko)
+
 # README
 
 This README would normally document whatever steps are necessary to get the
