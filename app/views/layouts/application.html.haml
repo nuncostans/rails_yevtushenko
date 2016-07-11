@@ -10,4 +10,9 @@
     .container
       - flash.each do |key, value|
         %div{:class => "alert alert-#{key}"}= value
+
+      =link_to 'EN', '?locale=en'
+      =link_to 'UA', '?locale=ua'
+      =link_to 'DE', '?locale=de'
+              
       = yield

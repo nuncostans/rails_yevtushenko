@@ -1,13 +1,13 @@
 .page-content-accounts
   %h1
-    Listing Accounts
+    =t('page-header')
     =image_tag "https://media.giphy.com/media/3o7ablBxBULsBGyeCA/giphy.gif" 
 
   %table.table.table-hover
     %thead
       %tr
-        %th Name
-        %th Age
+        %th= Account.human_attribute_name(:name)
+        %th= Account.human_attribute_name(:age)
         %tbody
           - @accounts.each do |account|
             %tr

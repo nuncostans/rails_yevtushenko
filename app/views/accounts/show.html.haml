@@ -5,13 +5,13 @@
     .panel-heading
       %h3.panel-title
         %b
-          Name:
+          = Account.human_attribute_name(:name)
     .panel-body
       = @account.name
     .panel-heading
       %h3.panel-title
         %b
-          Age:
+          = Account.human_attribute_name(:age)
     .panel-body
       = @account.age
 
