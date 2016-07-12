@@ -14,8 +14,8 @@
         = @product.price
       %b
         = Product.human_attribute_name(:price)
-  = link_to 'Back', products_path, class: 'btn btn-default'
-  = link_to 'Delete', @product, method: :delete, class: 'btn btn-danger'
+  = link_to t('back'), products_path, class: 'btn btn-default'
+  = link_to t('delete'), @product, method: :delete, class: 'btn btn-danger'
 
 
  

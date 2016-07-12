@@ -1,5 +1,14 @@
 ua:
-  activerecord:
+ activerecord:
+    hello: "Привіт світ"
+    page-header: "Список акаунтів"
+    back: "Назад"
+    create: "Створити"
+    destroy: "Видалити"
+    edit: "Змінити"
+    show: "Показати"
+    add-to-cart: "Додати в корзину"
+    all: "Всі"
     models:
       product: "Продукт"
     attributes:
@@ -8,17 +17,12 @@ ua:
         description: "Опис"
         price: "Ціна"
     errors:
-      template:
-        header:
-          one: "Одна помилка в %{model} "
-          other: "%{count} помилок у %{model}"
-          body: "У вас виникли наступні помилки:"
       models:
         product:
           attributes:
             name:
-              blank: "Назва продукту не може бути пустою!"
+              blank: "не може бути пустим!"
             price:
-              blank: "Ціна не може бути пустою!"
-              not_a_number: "Ціна має бути числом"
-              greater_than_or_eaqual_to: "Ціна має бути більшою ніж %{count}"
+              blank: "не може бути пустою!"
+              not_a_number: "має бути числом"
+              greater_than_or_eaqual_to: "має бути більшою ніж %{count}"

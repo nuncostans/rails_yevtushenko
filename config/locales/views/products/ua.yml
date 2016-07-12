@@ -1,0 +1,10 @@
+ua:
+  index:
+    title: "Список продуктів"
+  create_product: "Створити продукт"
+  back: "Назад"
+  delete: "Видалити"
+  edit: "Змінити"
+  show: "Показати"
+  add_to_cart: "Додати в корзину"
+  all_accounts: "Всі акаунти"

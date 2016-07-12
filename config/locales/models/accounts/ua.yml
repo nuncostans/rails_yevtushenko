@@ -1,0 +1,22 @@
+ua:
+  activerecord:
+    models:
+      account: "Акаунт"
+    attributes:
+      account:
+        name: "Ім'я"
+        age: "Вік"
+    errors:
+      models:
+        account:
+          attributes:
+            name:
+              blank: "неможе бути пустим"
+              too_short: "має бути не менше %{count} символів"
+              invalid: "повинно містити тільки літери"
+            age:
+              blank: "неможе бути пустим"
+              not_a_number: "має бути тільки числовим"
+              greater_than_or_equal_to: "має бути > %{count}"
+              less_than_or_equal_to: "має бути < %{count}"
+      

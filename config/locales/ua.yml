@@ -1,30 +1,16 @@
 ua:
-  hello: "Привіт світ"
-  page-header: "Список акаунтів"
+  helpers:
+    submit:
+      create: "Створити %{model}"
+      update: "Оновити %{model}"
   activerecord:
-    models:
-      account: "Акаунт"
-      product: "Продукт"
-      cart: "Корзина"
-    attributes:
-      account:
-        name: "Ім'я"
-        age: "Вік"
     errors:
       template:
         header:
-          one: "Одна помилка в %{model} "
+          one: "1 помилка присутня в  %{model}"
+          two: "2 помилки у %{model}"
+          three: "3 помилки у %{model}"
           other: "%{count} помилок у %{model}"
-        models:
-          account:
-            attributes:
-              name:
-                blank: "Ім'я не може бути пустим"
-                too_short: "Ім'я має бути не менше %{count} символів" 
-                invalid: "Ім'я може містити тільки літери"
-              age:
-                blank: "Вік не може бути пустим"
-                not_a_number: "Вік має бути числом"
-                greater_than_or_equal_to: "Вік має бути більшим ніж %{count}"
-                less_than_or_eaqual_to: "Вам і справді %{count} років, спробуйте реальний вік"
-          
+        body: "У вас виникли наступні помилки:"
+    
+    

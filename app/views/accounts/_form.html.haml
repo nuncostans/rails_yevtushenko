@@ -1,15 +1,8 @@
 .account-new
   = form_for(@account) do |f|
-    = if @account.errors.any?
+    - if @account.errors.any?
       %div#error_explanation
-        %h2
-          = pluralize(@account.errors.count, "error")
-          "prohibited this account from being saved:"
-
-          %ul
-            - @account.errors.full_messages.each do |message|
-              %li
-                = message
+        = error_messages_for(@account)
     .form-group
       = f.label :name
       %br
