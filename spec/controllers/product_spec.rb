@@ -37,7 +37,7 @@ describe ProductsController do
   it 'should not create new product' do
     post :create, product: { name:'', description:'',price: -1234}
     expect(assigns[:product]).not_to be_nil
-    expect(assigns[:product].errors.size).to eql(3)
+    expect(assigns[:product].errors.size).to eql(2)
     expect(assigns[:product].errors.messages[:name]).not_to be_nil
     expect(assigns[:product].errors.messages[:description]).not_to be_nil
     expect(assigns[:product].errors.messages[:price]).not_to be_nil
