@@ -10,7 +10,7 @@
 - [ ] Add gems:
   - [ ] Add devise to your project through User model
     - [ ] Add relation one-to-one between User and Account models (User must have one account).
-    - [ ]Change logic for ordering products, you should send email about order to registered user’s email. (current_user.email).
+    - [ ] Change logic for ordering products, you should send email about order to registered user’s email. (current_user.email).
   - [ ] Add paperclip to product model.
     - [ ] Provide ability to upload image(s) to product.
     - [ ] If you add ability to add many images to product you will get a bonus) 
