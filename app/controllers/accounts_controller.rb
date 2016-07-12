@@ -21,7 +21,7 @@ class AccountsController < ApplicationController
   def create
     @account = Account.new(account_params)
     if @account.save
-      AccountMailer.welcome(@account).deliver_later
+      AccountMailer.welcome_email(@account).deliver_later
       flash[:success] = "Account #{@account.name} created!!!"
       redirect_to accounts_path
     else
