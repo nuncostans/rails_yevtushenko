@@ -1,5 +1,5 @@
 class OrderPreview < ActionMailer::Preview
-  def welcome
-    OrderMailer.order_email(email)
+  def order_create
+    OrderMailer.order_email(Account.name)
   end
 end
