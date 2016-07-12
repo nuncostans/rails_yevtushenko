@@ -39,7 +39,6 @@ describe ProductsController do
     expect(assigns[:product]).not_to be_nil
     expect(assigns[:product].errors.size).to eql(2)
     expect(assigns[:product].errors.messages[:name]).not_to be_nil
-    expect(assigns[:product].errors.messages[:description]).not_to be_nil
     expect(assigns[:product].errors.messages[:price]).not_to be_nil
     expect(Product.where(name:'').first).to be_nil
   end
