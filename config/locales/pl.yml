@@ -1,0 +1,9 @@
+pl:
+  activerecord:
+    errors:
+      template:
+        header:
+          one: "1 błąd w  %{model}"
+          other: "%{count} błąd w %{model}"
+        body: "masz błędy:"
+  

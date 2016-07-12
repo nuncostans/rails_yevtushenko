@@ -1,0 +1,19 @@
+pl:
+ activerecord:
+    models:
+      product: "Produkt"
+    attributes:
+      product:
+        name: "Nazwa"
+        description: "Opis"
+        price: "Cena"
+    errors:
+      models:
+        product:
+          attributes:
+            name:
+              blank: "nie może być pusty"
+            price:
+              blank: "nie może być pusty"
+              not_a_number: "Musi być liczbą"
+              greater_than_or_eaqual_to: "musi być >  %{count}"

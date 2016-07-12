@@ -1,0 +1,22 @@
+pl:
+  activerecord:
+    models:
+      account: "konto"
+    attributes:
+      account:
+        name: "nazwa"
+        age: "wiek"
+    errors:
+      models:
+        account:
+          attributes:
+            name:
+              blank: "nie może być pusty"
+              too_short: "musi wynosić co najmniej %{count} znaków"
+              invalid: "musi zawierać tylko litery"
+            age:
+              blank: "nie może być pusty"
+              not_a_number: "nie może być"
+              greater_than_or_equal_to: "musi być > %{count}"
+              less_than_or_equal_to: "musi być < %{count}"
+      

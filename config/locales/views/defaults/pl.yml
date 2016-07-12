@@ -1,0 +1,9 @@
+pl:
+  back: "Nazad"
+  delete: "Wydalyty"
+  edit: "Zmina"
+  show: "Pokazaty"
+  helpers:
+    submit:
+      create: "tworzyć %{model}"
+      update: "aktualizacja %{model}"
