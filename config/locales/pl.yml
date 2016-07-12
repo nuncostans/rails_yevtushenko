@@ -1,4 +1,7 @@
 pl:
+  order_title: "Zacaz"
+  send: "Nadislat"
+  back_to_cart: "Nazad do korzyny"
   activerecord:
     errors:
       template:

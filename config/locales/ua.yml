@@ -1,4 +1,7 @@
 ua:
+  order_title: "Замовлення"
+  send: "Надіслати"
+  back_to_cart: "Назад до корзини"
   activerecord:
     errors:
       template:
