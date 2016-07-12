@@ -1,4 +1,5 @@
 en:
+  empty: 'Oh no! There are no products!'
   index:
     title: "Products list"
   add_to_cart: "Add to cart"

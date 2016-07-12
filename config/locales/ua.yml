@@ -1,8 +1,4 @@
 ua:
-  helpers:
-    submit:
-      create: "Створити %{model}"
-      update: "Оновити %{model}"
   activerecord:
     errors:
       template:

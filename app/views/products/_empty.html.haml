@@ -1,7 +1,7 @@
-%h1= 'Oh no! There are no products!'
+%h1= t('empty')
 %br
 = image_tag("giphy.gif")
 
 %br
-= link_to 'Create new product', new_product_path, class: 'btn btn-default'
-= link_to 'All accounts', accounts_path, class: 'btn btn-info'  
+= link_to t('create_product'), new_product_path, class: 'btn btn-default'
+= link_to t('all_accounts'), accounts_path, class: 'btn btn-info'  

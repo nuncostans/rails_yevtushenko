@@ -15,7 +15,7 @@
               %td= account.age
               %td= link_to t('show'), account, class: 'btn btn-primary'
               %td= link_to t('edit'), edit_account_path(account), class: 'btn btn-warning'
-              %td= link_to t('destroy'), account, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
+              %td= link_to t('delete'), account, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
               %br
 
   = link_to t('new_account'), new_account_path, class: 'btn btn-success'

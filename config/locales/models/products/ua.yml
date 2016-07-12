@@ -1,14 +1,5 @@
 ua:
  activerecord:
-    hello: "Привіт світ"
-    page-header: "Список акаунтів"
-    back: "Назад"
-    create: "Створити"
-    destroy: "Видалити"
-    edit: "Змінити"
-    show: "Показати"
-    add-to-cart: "Додати в корзину"
-    all: "Всі"
     models:
       product: "Продукт"
     attributes:

@@ -2,8 +2,4 @@ ua:
   index:
     title: "Список акаунтів"
   new_account: "Створити акаунт"
-  back: "Назад"
-  destroy: "Видалити"
-  edit: "Змінити"
-  show: "Показати"
   all_products: "Всі продукти"
