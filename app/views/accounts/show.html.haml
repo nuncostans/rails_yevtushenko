@@ -1,6 +1,7 @@
 .page-content-accounts
   %h1
-    = "Details of #{@account.name}"
+    = t('details_of')
+    = "#{@account.name}"
   .panel.panel-default
     .panel-heading
       %h3.panel-title
@@ -17,8 +18,8 @@
 
 
   /= link_to 'Cart', cart
-  = link_to 'Back', accounts_path, class: "btn btn-success"
+  = link_to t('back'), accounts_path, class: "btn btn-success"
   |
-  = link_to 'Edit', edit_account_path(@account), class: "btn btn-success"
+  = link_to t('edit'), edit_account_path(@account), class: "btn btn-success"
   |
-  = link_to 'Cart', cart_path(@account.id), class: 'btn btn-default'
+  = link_to t('cart'), cart_path(@account.id), class: 'btn btn-default'

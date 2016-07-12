@@ -3,6 +3,8 @@ ua:
   delete: "Видалити"
   edit: "Змінити"
   show: "Показати"
+  details_of: "Деталі"
+  cart: "Корзина"
   helpers:
     submit:
       create: "Створити %{model}"

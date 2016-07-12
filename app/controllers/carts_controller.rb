@@ -13,8 +13,9 @@ class CartsController < ApplicationController
   end
 
   def send_mail
+    redirect_to products_path
     OrderMailer.order_email(params[:email]).deliver_later
-redirect_to products_path
+    flash[:success] = t('order_created')
   end
   
   private

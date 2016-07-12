@@ -3,6 +3,8 @@ pl:
   delete: "Wydalyty"
   edit: "Zmina"
   show: "Pokazaty"
+  details_of: "Czastky"
+  cart: "Torba"
   helpers:
     submit:
       create: "tworzyć %{model}"

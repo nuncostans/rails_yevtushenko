@@ -2,6 +2,7 @@ pl:
   order_title: "Zacaz"
   send: "Nadislat"
   back_to_cart: "Nazad do korzyny"
+  order_created: "Zamovlenie poschlo"
   activerecord:
     errors:
       template:

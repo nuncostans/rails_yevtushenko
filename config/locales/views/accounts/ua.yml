@@ -2,4 +2,6 @@ ua:
   index:
     title: "Список акаунтів"
   new_account: "Створити акаунт"
+  edit_account: "Коригувати акаунт"
+  new_account: "Новий акаунт"
   all_products: "Всі продукти"

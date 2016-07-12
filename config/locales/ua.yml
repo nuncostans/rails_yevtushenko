@@ -2,6 +2,7 @@ ua:
   order_title: "Замовлення"
   send: "Надіслати"
   back_to_cart: "Назад до корзини"
+  order_created: "Замовлення створене"
   activerecord:
     errors:
       template:

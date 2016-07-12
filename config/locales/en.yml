@@ -23,4 +23,4 @@ en:
   order_title: "Order"
   send: "Send"
   back_to_cart: "Back to cart"
-  hello: "Hello world"
+  order_created: "Order created"

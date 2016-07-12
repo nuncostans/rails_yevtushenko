@@ -1,8 +1,8 @@
 .account-new
   %h1
-    Editing Account
+    = t('edit_account')
 
   = render 'form'
 
-  = link_to 'Back', accounts_path, class: "btn btn-info"
-  = link_to 'Show', @account, class: "btn btn-success"
+  = link_to t('back'), accounts_path, class: "btn btn-info"
+  = link_to t('show'), @account, class: "btn btn-success"
