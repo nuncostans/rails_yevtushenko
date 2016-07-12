@@ -3,29 +3,16 @@
 
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- [x] Add locales:
+  - [x] Pl.
+  - [x] UA.
+- [x] Add emails.
+- [ ] Add gems:
+  - [ ] Add devise to your project through User model
+    - [ ] Add relation one-to-one between User and Account models (User must have one account).
+    - [ ]Change logic for ordering products, you should send email about order to registered user’s email. (current_user.email).
+  - [ ] Add paperclip to product model.
+    - [ ] Provide ability to upload image(s) to product.
+    - [ ] If you add ability to add many images to product you will get a bonus) 
+  - [ ] Integrate devise and omniauth with google (bonus task, not required).
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
