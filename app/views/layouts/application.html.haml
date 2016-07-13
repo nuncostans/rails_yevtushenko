@@ -11,8 +11,13 @@
       - flash.each do |key, value|
         %div{:class => "alert alert-#{key}"}= value
 
-      =link_to 'EN', '?locale=en'
-      =link_to 'UA', '?locale=ua'
-      =link_to 'PL', '?locale=pl'
-              
+      =link_to 'EN', '?locale=en', class: "btn btn-default"
+      =link_to 'UA', '?locale=ua', class: "btn btn-default"
+      =link_to 'PL', '?locale=pl', class: "btn btn-default"
+      .logins
+        -if user_signed_in?
+          = link_to t('log_out'), destroy_user_session_path, :method => :delete, class: 'btn btn-success'
+        -else
+          = link_to t('log_in'), new_user_session_path,class: 'btn btn-success' 
+          = link_to t('register'), new_user_registration_path, class: 'btn btn-success'            
       = yield

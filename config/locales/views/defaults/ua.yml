@@ -5,6 +5,10 @@ ua:
   show: "Показати"
   details_of: "Деталі"
   cart: "Корзина"
+  log_in: "Увійти"
+  log_out: "Вийти"
+  register: "Зареєструватися"
+  order: "Замовлення"
   helpers:
     submit:
       create: "Створити %{model}"

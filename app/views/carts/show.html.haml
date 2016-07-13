@@ -12,7 +12,7 @@
           %td= link_to t('edit'), edit_product_path(product), class: 'btn btn-warning'
           %td= link_to t('delete'), product, method: :delete, data: { confirm: 'Are you sure?'}, class: 'btn btn-danger'
   %p
-    = link_to t('order'), order_cart_path, method: :get, class: 'btn btn-success'
+    = link_to t('order'), order_cart_path, class: 'btn btn-default'
   %p
     = link_to t('back'), products_path, class: 'btn btn-default'
 

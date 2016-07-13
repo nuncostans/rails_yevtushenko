@@ -5,6 +5,10 @@ pl:
   show: "Pokazaty"
   details_of: "Czastky"
   cart: "Torba"
+  log_in: "Wloguwaty"
+  log_out: "Wyloguwaty"
+  register: "Zarestruwat"
+  order: "Zakaz"
   helpers:
     submit:
       create: "tworzyć %{model}"

@@ -28,6 +28,11 @@ gem 'haml'
 gem 'coveralls', require: false
 gem 'dynamic_form'
 gem 'devise'
+gem 'devise-bootstrap-views'
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
+gem 'paperclip', '~> 5.0.0'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

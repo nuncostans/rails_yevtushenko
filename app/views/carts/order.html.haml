@@ -1,11 +1,10 @@
 %h1= t('order_title')
 
-= form_tag send_mail_path do 
-  .form-group
-    = label_tag :email, 'email'
+= form_tag send_mail_path do
+  %h2
+    =t('total_sum_is')
+    =@total_sum
     %br
-    = text_field_tag :email
   .actions
     = submit_tag t('send')
-    
 = button_to t('back_to_cart'), cart_path, method: :get, class: 'btn btn-default btn-success'

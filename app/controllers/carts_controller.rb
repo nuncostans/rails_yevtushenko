@@ -1,6 +1,8 @@
 class CartsController < ApplicationController
   
   before_action :cart_find
+  before_action :authenticate_user!, except: [:add]
+  before_action :total_price_of_products
   
   def show
   end
@@ -13,9 +15,14 @@ class CartsController < ApplicationController
   end
 
   def send_mail
-    redirect_to products_path
-    OrderMailer.order_email(params[:email]).deliver_later
-    flash[:success] = t('order_created')
+    if OrderMailer.order_email(current_user.email)
+      redirect_to products_path
+      OrderMailer.order_email(current_user.email).deliver_later
+      @products_in_cart.clear
+      flash[:success] = t('order_created')
+    else
+      render 'order'
+    end
   end
   
   private
@@ -23,5 +30,8 @@ class CartsController < ApplicationController
   def cart_find
     @products_in_cart = Cart.includes(:products).find(session[:cart_id]).products
   end
-  
+
+  def total_price_of_products
+    @total_sum = cart_find.sum(:price)
+  end
 end
