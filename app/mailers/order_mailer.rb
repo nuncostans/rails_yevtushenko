@@ -5,7 +5,7 @@ class OrderMailer < ApplicationMailer
     mail(
       :subject => 'hello',
       :to  => email,
-      :from => 'sender@example.com',
+      :from => 'nuncostans@vivaldi.net',
       :html_body => '<strong>Hello from Postmark!<strong>',
       :track_opens => 'true'
     )
