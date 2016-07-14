@@ -3,7 +3,7 @@ class OrderMailer < ApplicationMailer
   def order_email(email)
     @url = 'https://rails_yevtushenko.herokuapp.com'
     mail(
-      :subject => 'hello',
+      :subject => 'You have new order in rails-yevtushenko',
       :to  => email,
       :from => 'nuncostans@vivaldi.net',
       :html_body => '<strong>Hello from Postmark!<strong>',

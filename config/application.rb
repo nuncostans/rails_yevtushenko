@@ -28,7 +28,7 @@ module RailsYevtushenko
       g.test_framework :rspec
     end
     config.action_mailer.delivery_method = :postmark
-    config.action_mailer.postmark_settings = { :api_token => "b8413087-7638-41f6-b9d6-24e88abe049d" }
+    config.action_mailer.postmark_settings = { :api_token => "7d31bbfb-428c-4616-a0d1-5436ae5db728"}
     
   end
 end
