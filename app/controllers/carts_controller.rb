@@ -1,7 +1,6 @@
 class CartsController < ApplicationController
-  
+  before_action :authenticate_user!
   before_action :cart_find
-  before_action :authenticate_user!, except: [:add]
   before_action :total_price_of_products
   
   def show
