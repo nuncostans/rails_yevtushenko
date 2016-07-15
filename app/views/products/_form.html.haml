@@ -1,4 +1,4 @@
-= form_for(@product)  do |f|
+= form_for @product, url: products_path, html: { multipart: true }  do |f|
   - if @product.errors.any?
     %div#error_explanation
       = error_messages_for(@product)
@@ -14,6 +14,10 @@
     = f.label :price
     %br
     = f.number_field :price
+  .form-group
+    = f.label :photo
+    %br
+    = f.file_field :photo
   .actions
     = f.submit
   
