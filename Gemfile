@@ -33,6 +33,7 @@ gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'paperclip', '~> 5.0.0'
 gem 'postmark-rails'
+gem 'warden'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
