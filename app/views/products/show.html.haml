@@ -14,6 +14,7 @@
         = @product.price
       %b
         = Product.human_attribute_name(:price)
+        = image_tag @product.photo.url
   = link_to t('back'), products_path, class: 'btn btn-default'
   = link_to t('delete'), @product, method: :delete, class: 'btn btn-danger'
 
