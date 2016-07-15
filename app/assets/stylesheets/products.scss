@@ -25,3 +25,11 @@ img {
   padding: 20px;
   width: 900px;
 }
+
+.image_zoom {
+    transition: -webkit-transform 0.25s ease;
+}
+
+.image_zoom:active {
+    -webkit-transform: scale(2);
+}
