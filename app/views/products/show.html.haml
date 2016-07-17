@@ -8,13 +8,18 @@
           = Product.human_attribute_name(:description)
     .panel-body
       = @product.description
+    .panel-heading
+      %h3.panel-title
+        %b
+          image
+    .panel-body
+      = image_tag @product.photo.url(:medium)
   %ul.list-group
     %li.list-group-item
       %span.badge
         = @product.price
       %b
         = Product.human_attribute_name(:price)
-        = image_tag @product.photo.url
   = link_to t('back'), products_path, class: 'btn btn-default'
   = link_to t('delete'), @product, method: :delete, class: 'btn btn-danger'
 
