@@ -1,10 +1,17 @@
-%h1= t('order_title')
+.page-content-order
+  %h1= t('order_title')
+  %table.table.table-hover
+    - @products_in_cart.each do |product|
+      %tr
+        %td= product.name
+        %td= product.description
+        %td= product.price
+  %h3
+    .sum-total
+      = t('total_sum_is')
+      %b
+        = @total_sum
 
-= form_tag send_mail_path do
-  %h2
-    =t('total_sum_is')
-    =@total_sum
-    %br
-  .actions
-    = submit_tag t('send')
-= button_to t('back_to_cart'), cart_path, method: :get, class: 'btn btn-default btn-success'
+  = button_to 'Send', send_mail_path, method: :post, class: 'btn btn-success'
+  %br
+  = link_to t('back'), cart_path, class: 'btn btn-default'

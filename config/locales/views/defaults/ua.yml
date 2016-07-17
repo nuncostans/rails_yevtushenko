@@ -9,7 +9,18 @@ ua:
   log_out: "Вийти"
   register: "Зареєструватися"
   order: "Замовлення"
+  sign_in_with_google: "Вхід через гугл"
+  total_sum_is: "Загальна сума"
   helpers:
     submit:
       create: "Створити %{model}"
       update: "Оновити %{model}"
+  devise:
+    registrations:
+      user:
+        signed_up: "Користувач зареєстрований"
+    sessions:
+      user:
+        signed_out: "Користувач вийшов"
+        signed_in: "Користувач зайшов"
+      

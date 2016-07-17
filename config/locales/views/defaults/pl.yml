@@ -9,7 +9,19 @@ pl:
   log_out: "Wyloguwaty"
   register: "Zarestruwat"
   order: "Zakaz"
+  sign_in_with_google: "Whod z google"
+  total_sum_is: "Suma zagalna"
   helpers:
     submit:
       create: "tworzyć %{model}"
       update: "aktualizacja %{model}"
+  devise:
+    registrations:
+      user:
+        signed_up: "Korystuwacz Zareestrovany"
+    sessions:
+      user:
+        signed_out: "Korystuwach wyishow"
+        sign_in: "Korystuwach zaishow"
+        
+

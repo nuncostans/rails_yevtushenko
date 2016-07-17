@@ -1,7 +1,6 @@
 ua:
   empty: "О ні, жодних продуктів!"
-  index:
-    title: "Список продуктів"
+  title-products: "Список продуктів"
   create_product: "Створити продукт"
   add_to_cart: "Додати в корзину"
   all_accounts: "Всі акаунти"

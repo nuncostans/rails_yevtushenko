@@ -1,7 +1,6 @@
 pl:
   empty: "O nie, nie ma jedzenia!"
-  index:
-    title: "Lista produktów"
+  title-products: "Lista produktów"
   create_product: "Nowy produkt"
   add_to_cart: "Dodaj do koszyka"
   all_accounts: "wszystkie konta"

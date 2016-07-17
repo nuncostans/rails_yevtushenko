@@ -14,5 +14,6 @@ Rails.application.routes.draw do
   match '/send_mail', to: 'carts#send_mail', via: 'post'
   resources :accounts
   root 'products#index'
-  
+  resources :galleries 
+  resources :pictures  
 end
