@@ -19,5 +19,6 @@
           = link_to t('log_out'), destroy_user_session_path, :method => :delete, class: 'btn btn-success'
         -else
           = link_to t('log_in'), new_user_session_path,class: 'btn btn-success' 
-          = link_to t('register'), new_user_registration_path, class: 'btn btn-success'            
+          = link_to t('register'), new_user_registration_path, class: 'btn btn-success'
+          = link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path
       = yield
