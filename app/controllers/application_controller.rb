@@ -13,6 +13,16 @@ class ApplicationController < ActionController::Base
     session[:cart_id] ||= Cart.create.id
   end
   
+  def authorize_admin
+    redirect_to :root unless current_user.admin
+    # redirect_to :root, :status => 401 unless current_user.admin
+    #redirects to previous page
+  end
+
+  def user_admin?
+    @user_admin = current_user.update_attribute :admin, true
+  end
+  
   def set_locale
     #I18n.locale = params[:locale] if params[:locale].present?
     #I18n.locale = params[:locale] || I18n.default_locale

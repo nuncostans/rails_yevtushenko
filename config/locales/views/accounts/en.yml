@@ -1,3 +1,5 @@
 en:
+  index:
+    title: "List of accounts"
   edit_account: "Edit account"
   new_account: "New account"
