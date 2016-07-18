@@ -27,7 +27,7 @@ class CartsController < ApplicationController
   private
 
   def cart_find
-    @products_in_cart = Cart.includes(:products).find(session[:cart_id]).products
+    @products_in_cart = Cart.includes(:products).find(session[:cart_id]).products || Cart.create(:cart_id => params[:id])
   end
 
   def total_price_of_products
