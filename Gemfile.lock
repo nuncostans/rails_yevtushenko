@@ -288,6 +288,7 @@ DEPENDENCIES
   jquery-rails
   omniauth
   omniauth-google-oauth2
+  omniauth-oauth2
   paperclip (~> 5.0.0)
   pg
   postmark-rails
