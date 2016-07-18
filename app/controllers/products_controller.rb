@@ -38,7 +38,7 @@ class ProductsController < ApplicationController
   def destroy
     @product.destroy
     flash[:danger] = "You have destroyed product #{@product.name}"
-    redirect_to root_url
+    redirect_to products_path
   end
 
   private
