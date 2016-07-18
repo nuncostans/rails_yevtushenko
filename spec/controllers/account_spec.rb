@@ -1,7 +1,14 @@
 require 'rails_helper'
 
+
+
 describe AccountsController do
 
+  before :each do
+    @user = FactoryGirl.create :user
+    sign_in @user
+  end
+    
   it 'assigns @accounts variable' do
     acc =create(:account)
     get :index
