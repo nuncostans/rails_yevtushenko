@@ -1,9 +1,9 @@
 class ProductsController < ApplicationController
   before_action :authenticate_user!, except: [:index]
-  before_action :set_product, only: [:show, :edit, :update, :destroy]
+  before_action :set_product, only: [:show, :edit, :update, :destroy, :patch]
 
   def index
-    @products =  Product.all
+    @products = Product.all
   end
 
   def show
@@ -38,7 +38,7 @@ class ProductsController < ApplicationController
   def destroy
     @product.destroy
     flash[:danger] = "You have destroyed product #{@product.name}"
-    redirect_to root_url
+    redirect_to products_path
   end
 
   private
