@@ -16,5 +16,5 @@
   - [x] Add paperclip to product model.
     - [x] Provide ability to upload image(s) to product.
     - [ ] If you add ability to add many images to product you will get a bonus) 
-  - [ ] Integrate devise and omniauth with google (bonus task, not required).
+  - [x] Integrate devise and omniauth with google (bonus task, not required).
 
