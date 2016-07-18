@@ -1,6 +1,10 @@
 require 'rails_helper'
 
 describe ProductsController do
+before :each do
+    @user = FactoryGirl.create :user
+    sign_in @user
+end
 
   it 'assigns @products variable' do
     product = create(:product)
@@ -58,7 +62,7 @@ describe ProductsController do
   it 'should delete product and redirects to products url' do
     product = create(:product)
     delete :destroy, id: product.id, product: {name:'Tvv', description:'Tv-set', price: 234}
-    expect(response).to redirect_to root_url
+    expect(response).to redirect_to products_url
   end
   
    it 'should find all products like name' do
