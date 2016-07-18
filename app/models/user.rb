@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
          :trackable,
          :validatable,
          :omniauthable,
-         omniauth_providers: :google_oauth
+         :omniauth_providers => :google_oauth
 
   has_one :account
 
