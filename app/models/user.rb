@@ -22,4 +22,8 @@ class User < ActiveRecord::Base
     end
     user
   end
+
+  def welcome_user_email
+    UserMailer.welcome_user_email(self).deliver_later
+  end
 end
