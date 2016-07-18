@@ -1,5 +1,6 @@
 [![Travis CI       ](https://travis-ci.org/nuncostans/rails_yevtushenko.svg)           ](https://travis-ci.org/nuncostans/rails_yevtushenko)
 [![Coverage Status](https://coveralls.io/repos/github/nuncostans/rails_yevtushenko/badge.svg?branch=master)](https://coveralls.io/github/nuncostans/rails_yevtushenko?branch=master)
+[On heroku](rails-yevtushenko.herokuapp.com)
 
 # README
 
