@@ -39,6 +39,7 @@ gem 'warden'
 gem 'carrierwave'
 gem 'cloudinary'
 gem 'paperclip-cloudinary'
+gem 'rails_admin'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
