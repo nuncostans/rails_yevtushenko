@@ -1,7 +1,28 @@
 .page-content
   %h1
     Edit
+  = form_for @product, method: :patch, html: { multipart: true }  do |f|
+    - if @product.errors.any?
+      %div#error_explanation
+        = error_messages_for(@product)
+    .form-group
+      = f.label :name
+      %br
+      = f.text_field :name
+    .form-group
+      = f.label :description
+      %br
+      = f.text_field :description
+    .form-group
+      = f.label :price
+      %br
+      = f.number_field :price
+    .form-group
+      = f.label :photo
+      %br
+      = f.file_field :photo
+    .actions
+      = f.submit
   
-  = render 'form'
   = link_to t('show'), @product, class:'btn btn-default' |
   = link_to t('Back'), products_path, class:'btn btn-default'
