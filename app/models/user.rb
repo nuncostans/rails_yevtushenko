@@ -11,7 +11,9 @@ class User < ActiveRecord::Base
          :omniauthable, :omniauth_providers => [:google_oauth2]
 
   has_one :account
-
+  
+  ROLES = %i[admin moderator author banned]
+  
   def self.from_omniauth(access_token)
     data = access_token.info
     user = User.where(email: data['email']).first
