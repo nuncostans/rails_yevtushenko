@@ -18,8 +18,12 @@
         -if user_signed_in?
           = link_to t('log_out'), destroy_user_session_path, :method => :delete, class: 'btn btn-success'
         -else
-          = link_to t('log_in'), new_user_session_path,class: 'btn btn-success' 
+          = link_to t('log_in'), new_user_session_path, class: 'btn btn-success' 
           = link_to t('register'), new_user_registration_path, class: 'btn btn-success'
           = link_to t('sign_in_with_google'), user_google_oauth2_omniauth_authorize_path, class: 'btn btn-danger'
+      .header
+        = link_to "Demo shop", root_url, class: 'label_site'
+        
+        = link_to image_tag('shopping_cart_racing.png', size:"40x40"), cart_path
 
       = yield
