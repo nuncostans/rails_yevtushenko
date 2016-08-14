@@ -1,0 +1,129 @@
+
+app/mailers/account_mailer.rb,106
+class AccountMailer < ApplicationMailerAccountMailer1,0
+  def welcome_email(account)welcome_email2,40
+
+app/mailers/order_mailer.rb,96
+class OrderMailer < ApplicationMailerOrderMailer1,0
+  def order_email(email)order_email3,79
+
+app/mailers/user_mailer.rb,107
+class UserMailer < ApplicationMailerUserMailer1,0
+  def welcome_user_email(user)welcome_user_email3,38
+
+app/mailers/application_mailer.rb,67
+class ApplicationMailer < ActionMailer::BaseApplicationMailer1,0
+
+app/helpers/devise_helper.rb,94
+module DeviseHelperDeviseHelper1,0
+  def devise_error_messages!devise_error_messages!2,20
+
+app/helpers/products_helper.rb,104
+module ProductsHelperProductsHelper1,0
+  def product_list_partial_nameproduct_list_partial_name3,23
+
+app/helpers/application_helper.rb,47
+module ApplicationHelperApplicationHelper1,0
+
+app/helpers/accounts_helper.rb,41
+module AccountsHelperAccountsHelper1,0
+
+app/helpers/orders_helper.rb,37
+module OrdersHelperOrdersHelper1,0
+
+app/helpers/user_helper.rb,33
+module UserHelperUserHelper1,0
+
+app/controllers/user_controller.rb,99
+class UserController < ApplicationControllerUserController1,0
+  def user_paramsuser_params2,45
+
+app/controllers/sessions_controller.rb,104
+class SessionsController < Devise::SessionsControllerSessionsController1,0
+  def destroydestroy2,54
+
+app/controllers/carts_controller.rb,260
+class CartsController < ApplicationControllerCartsController1,0
+  def showshow6,153
+  def addadd9,173
+  def orderorder13,251
+  def send_mailsend_mail16,270
+  def cart_findcart_find29,564
+  def total_price_of_productstotal_price_of_products33,709
+
+app/controllers/application_controller.rb,243
+class ApplicationController < ActionController::BaseApplicationController1,0
+  def set_current_cartset_current_cart16,405
+  def authorize_adminauthorize_admin20,478
+  def user_admin?user_admin?26,653
+  def set_localeset_locale30,741
+
+app/controllers/products_controller.rb,325
+class ProductsController < ApplicationControllerProductsController1,0
+  def indexindex5,182
+  def showshow9,229
+  def newnew12,247
+  def editedit16,291
+  def createcreate19,309
+  def updateupdate29,505
+  def destroydestroy38,684
+  def set_productset_product46,834
+  def product_paramsproduct_params50,900
+
+app/controllers/accounts_controller.rb,331
+class AccountsController < ApplicationControllerAccountsController1,0
+  def indexindex7,232
+  def showshow12,297
+  def newnew16,316
+  def editedit20,360
+  def createcreate23,378
+  def updateupdate34,650
+  def destroydestroy43,836
+    def set_accountset_account51,976
+    def account_paramsaccount_params55,1048
+
+app/controllers/users/omniauth_callbacks_controller.rb,128
+class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksControllerUsers1,0
+  def google_oauth2google_oauth22,79
+
+app/views/orders/order.js,0
+
+app/assets/javascripts/application.js,0
+
+app/models/friendship.rb,267
+class Friendship < ActiveRecord::BaseFriendship1,0
+  def create_inversecreate_inverse9,213
+  def destroy_inversedestroy_inverse13,286
+  def has_inverse?has_inverse?17,340
+  def inversesinverses21,412
+  def inverse_match_optionsinverse_match_options25,480
+
+app/models/user.rb,152
+class User < ActiveRecord::BaseUser1,0
+  def self.from_omniauth(access_token)from_omniauth17,438
+  def welcome_user_emailwelcome_user_email28,709
+
+app/models/ability.rb,65
+class AbilityAbility1,0
+  def initialize(user)initialize4,41
+
+app/models/cart.rb,41
+class Cart < ActiveRecord::BaseCart1,0
+
+app/models/product.rb,47
+class Product < ActiveRecord::BaseProduct1,0
+
+app/models/account.rb,47
+class Account < ActiveRecord::BaseAccount1,0
+
+lib/mailer_previews/order_preview.rb,97
+class OrderPreview < ActionMailer::PreviewOrderPreview1,0
+  def order_createorder_create2,43
+
+lib/mailer_previews/account_preview.rb,91
+class AccountPreview < ActionMailer::PreviewAccountPreview1,0
+  def welcomewelcome2,45
+
+lib/mailer_previews/user_preview.rb,93
+class UserPreview < ActionMailer::PreviewUserPreview1,0
+  def user_createuser_create2,42
