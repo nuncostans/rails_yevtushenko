@@ -1,7 +1,5 @@
 require 'rails_helper'
 
-
-
 describe AccountsController do
 
   before :each do

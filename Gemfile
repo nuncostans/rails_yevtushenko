@@ -31,8 +31,8 @@ gem 'carrierwave'
 gem 'cloudinary'
 gem 'paperclip-cloudinary'
 gem 'rails_admin'
-gem 'cancancan','~> 1.10'
-gem 'dotenv-rails', :groups => [:development, :test]
+gem 'cancancan', '~> 1.10'
+gem 'dotenv-rails', groups: [:development, :test]
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -46,6 +46,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'rspec-rails'
+  gem 'rubocop', require: false
 end
 
 group :test do
@@ -69,4 +70,4 @@ group :production do
   gem 'rails_12factor'
 end
 
-ruby "2.3.0"
+ruby '2.3.0'
