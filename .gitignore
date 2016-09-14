@@ -19,3 +19,5 @@
 /.idea/*
 /coverage/*
 .*~
+/*.komodoproject
+/geany
