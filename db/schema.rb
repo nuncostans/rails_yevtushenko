@@ -49,13 +49,9 @@ ActiveRecord::Schema.define(version: 20160729083438) do
     t.string   "name"
     t.text     "description"
     t.float    "price"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.integer  "cart_id"
-    t.string   "avatar_file_name"
-    t.string   "avatar_content_type"
-    t.integer  "avatar_file_size"
-    t.datetime "avatar_updated_at"
     t.string   "photo_file_name"
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
@@ -77,9 +73,6 @@ ActiveRecord::Schema.define(version: 20160729083438) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.string   "provider"
-    t.string   "uid"
-    t.boolean  "admin"
     t.string   "role"
   end
 
