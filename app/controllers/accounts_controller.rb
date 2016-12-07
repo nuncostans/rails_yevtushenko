@@ -1,6 +1,5 @@
 class AccountsController < ApplicationController
   before_action :authenticate_user!
-  before_action :user_admin?
   before_action :authorize_admin, except: :new
   before_action :set_account, only: [:show, :edit, :update, :destroy]
 
@@ -8,10 +7,8 @@ class AccountsController < ApplicationController
     @accounts = Account.all.order(age: :asc)
   end
 
-
   def show
   end
-
 
   def new
     @account = Account.new
@@ -48,12 +45,11 @@ class AccountsController < ApplicationController
 
   private
 
-    def set_account
-      @account = Account.find(params[:id])
-    end
+  def set_account
+    @account = Account.find(params[:id])
+  end
 
-    def account_params
-      params.require(:account).permit(:name, :age)
-    end
-    
+  def account_params
+    params.require(:account).permit(:name, :age)
+  end
 end
