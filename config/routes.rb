@@ -1,15 +1,14 @@
 Rails.application.routes.draw do
-
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   devise_for :users,
-             controllers: { omniauth_callbacks: "users/omniauth_callbacks" }
+             controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
   resources :products
-  
+
   resource :cart, only: :show do
     collection do
-          get 'order'
+      get 'order'
     end
   end
 
@@ -18,6 +17,6 @@ Rails.application.routes.draw do
   match '/send_mail', to: 'carts#send_mail', via: 'post'
   resources :accounts
   root 'products#index'
-  #resources :galleries
-  #resources :pictures
+  # resources :galleries
+  # resources :pictures
 end

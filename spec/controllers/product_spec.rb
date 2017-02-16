@@ -1,10 +1,10 @@
 require 'rails_helper'
 
 describe ProductsController do
-before :each do
-    @user = FactoryGirl.create :user
+  before :each do
+    @user = User.create(email: 'bob@bob.com', password: '2314523', role: 'admin')
     sign_in @user
-end
+  end
 
   it 'assigns @products variable' do
     product = create(:product)
@@ -31,7 +31,7 @@ end
     get :show, id: product.id
     expect(assigns[:product]).not_to be_nil
   end
-  
+
   it 'should find product by price' do
     post :create, product: {name:'Tv', description: 'Tv-set', price: 3456}
     get :index
@@ -46,7 +46,7 @@ end
     expect(assigns[:product].errors.messages[:price]).not_to be_nil
     expect(Product.where(name:'').first).to be_nil
   end
-  
+
   it 'should update product and redirects' do
     product = create(:product)
     put :update, id: product.id, product: {name:'Tvv', description:'Tv-set', price: 234}
@@ -64,8 +64,8 @@ end
     delete :destroy, id: product.id, product: {name:'Tvv', description:'Tv-set', price: 234}
     expect(response).to redirect_to products_url
   end
-  
-   it 'should find all products like name' do
+
+  it 'should find all products like name' do
     6.times do |i|
       post :create, product:{ name: "Tv#{i}",description: 'Tv-set', price: 34 }
     end
@@ -73,5 +73,5 @@ end
     expect(assigns[:products].size).to eql(6)
     expect(Product.all.size).to eql(6)
   end
-  
+
 end

@@ -382,7 +382,7 @@ DEPENDENCIES
   rails (= 4.2.7)
   rails_12factor
   rails_admin
-  rspec-rails
+  rspec-rails (~> 3.5)
   rubocop
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
@@ -398,4 +398,4 @@ RUBY VERSION
    ruby 2.3.0p0
 
 BUNDLED WITH
-   1.13.1
+   1.13.7
